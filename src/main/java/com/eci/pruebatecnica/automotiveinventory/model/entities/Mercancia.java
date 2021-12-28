@@ -1,17 +1,23 @@
-package com.eci.pruebatecnica.automotiveinventory.entities;
+package com.eci.pruebatecnica.automotiveinventory.model.entities;
 
+import javax.persistence.*;
 import java.util.Date;
 
-public class Commodity {
+@Entity
+@Table(name="Mercancia")
+public class Mercancia {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String nombreProducto;
     private Integer cantidad;
     private Date fechaIngreso;
     private String usuario;
 
-    public Commodity() {
+    public Mercancia() {
     }
 
-    public Commodity(String nombreProducto, Integer cantidad, Date fechaIngreso, String usuario) {
+    public Mercancia(String nombreProducto, Integer cantidad, Date fechaIngreso, String usuario) {
         this.nombreProducto = nombreProducto;
         this.cantidad = cantidad;
         this.fechaIngreso = fechaIngreso;

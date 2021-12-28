@@ -1,15 +1,15 @@
-package com.eci.pruebatecnica.automotiveinventory.entities;
+package com.eci.pruebatecnica.automotiveinventory.model.entities;
 
-public class User {
+public class Usuario {
     private String nombre;
     private String edad;
     private String cargo;
     private String fechaIngresoCompañia;
 
-    public User() {
+    public Usuario() {
     }
 
-    public User(String nombre, String edad, String cargo, String fechaIngresoCompañia) {
+    public Usuario(String nombre, String edad, String cargo, String fechaIngresoCompañia) {
         this.nombre = nombre;
         this.edad = edad;
         this.cargo = cargo;
