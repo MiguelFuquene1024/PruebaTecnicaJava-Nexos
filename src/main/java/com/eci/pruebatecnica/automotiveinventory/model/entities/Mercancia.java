@@ -4,11 +4,12 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="Mercancia")
+@Table(name="mercancia")
 public class Mercancia {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private String nombreProducto;
     private Integer cantidad;
     private Date fechaIngreso;
@@ -17,11 +18,20 @@ public class Mercancia {
     public Mercancia() {
     }
 
-    public Mercancia(String nombreProducto, Integer cantidad, Date fechaIngreso, String usuario) {
+    public Mercancia(long id, String nombreProducto, Integer cantidad, Date fechaIngreso, String usuario) {
+        this.id = id;
         this.nombreProducto = nombreProducto;
         this.cantidad = cantidad;
         this.fechaIngreso = fechaIngreso;
         this.usuario = usuario;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNombreProducto() {
