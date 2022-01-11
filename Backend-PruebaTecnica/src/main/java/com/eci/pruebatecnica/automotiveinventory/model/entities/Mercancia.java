@@ -10,8 +10,8 @@ import java.util.Date;
 public class Mercancia {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-
+    private long idMercancia;
+    @Column( unique = true )
     private String nombreProducto;
     private Integer cantidad;
     private Date fechaIngreso;
@@ -20,8 +20,8 @@ public class Mercancia {
     public Mercancia() {
     }
 
-    public Mercancia(long id, String nombreProducto, Integer cantidad, Date fechaIngreso, String usuario) {
-        this.id = id;
+    public Mercancia(long idMercancia, String nombreProducto, Integer cantidad, Date fechaIngreso, String usuario) {
+        this.idMercancia = idMercancia;
         this.nombreProducto = nombreProducto;
         this.cantidad = cantidad;
         this.fechaIngreso = fechaIngreso;
@@ -35,12 +35,12 @@ public class Mercancia {
         this.usuario=mercanciaDto.getUsuario();
     }
 
-    public long getId() {
-        return id;
+    public long getIdMercancia() {
+        return idMercancia;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setIdMercancia(long idMercancia) {
+        this.idMercancia = idMercancia;
     }
 
     public String getNombreProducto() {

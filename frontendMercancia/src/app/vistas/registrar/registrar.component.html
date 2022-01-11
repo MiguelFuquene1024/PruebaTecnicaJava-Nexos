@@ -1,1 +1,28 @@
-<p>registrar works!</p>
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="registroForm" (ngSubmit)="postForm(registroForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlImput1">Nombre Producto</label>
+            <input type="text" class="form-control" placeholder="Nombre del producto" formControlName="nombreProducto">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlImput1">Cantidad</label>
+            <input type="text" class="form-control" placeholder="Cantidad" formControlName="cantidad">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlImput1">Fecha Ingreso</label>
+            <input type="text" class="form-control" placeholder="Fecha de ingreso" formControlName="fechaIngreso">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlImput1">Usuario Que Registra</label>
+            <input type="text" class="form-control" placeholder="Nombre del usuario" formControlName="usuario">
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-dark" (click)="salir()"> Salir</button>
+    </form>
+</div>
+
+
+<app-footer></app-footer>

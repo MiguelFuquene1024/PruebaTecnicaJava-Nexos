@@ -9,5 +9,9 @@ class AutomotiveinventoryApplicationTests {
 	@Test
 	void contextLoads() {
 	}
+	@Test
+	void deberiaRegistrarMercancia(){
+
+	}
 
 }

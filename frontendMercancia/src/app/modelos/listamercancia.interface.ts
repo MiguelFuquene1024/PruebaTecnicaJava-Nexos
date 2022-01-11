@@ -1,5 +1,5 @@
 export interface ListamercanciaI{
-    id:any;
+    idMercancia:any;
     nombreProducto:string
     cantidad:number;
     fechaIngreso:any;
